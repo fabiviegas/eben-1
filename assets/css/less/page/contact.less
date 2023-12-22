@@ -1,0 +1,133 @@
+//out: false
+
+.page__contact {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    
+    .wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .contact__box {
+            border-radius: 60px 0px;
+            background-color: white;
+            box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25);
+            padding: 30px 16px 47px 16px;
+
+            .cover__contact {
+                display: none;
+            }
+
+            .content {
+
+                .title {
+               font: 900 32px/28px @fontO;
+               color: @chryslerBlue;
+               text-align: center;
+               margin-bottom: 10px; 
+                }
+
+                .description {
+                    font: 400 14px/18px @fontO;
+                    text-align: center;
+                    width: 213px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 25px;
+                }
+
+                .form__contact {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    input,
+                    textarea {
+                        width: 100%;
+                        border-radius: 20px;
+                        border: 1px solid @roseQuartz;
+                        font: 400 16px/20px @fontO;
+                        color: @eerieBlack;
+                        padding: 19px 20px 22px 20px;
+
+                        &::placeholder {
+                        font: 400 16px/20px @fontO;
+                        color: @gray; 
+                        }
+                    }
+
+                    textarea {
+                        height: 133px;
+                        margin-bottom: 20px; 
+                    }
+
+                    button {
+                        width: 100%;
+                        background-color: @veronica;
+                        padding: 16px 20px 17px 20px;
+                        font: 600 18px/25px @fontO;
+                        color: white;
+                        text-transform: uppercase;
+                        border-radius: 20px;
+                        border: none;
+                        transition: all linear .15s;
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: @chryslerBlue;
+                        }
+                    }
+                
+                }
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        padding-top: 90px;
+        padding-bottom: 100px;
+
+        .wrapper {
+            max-width: 1122px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
+
+            .contact__box {
+                padding: 50px 68px 50px 0;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 80px;
+                max-width: 978px;
+                margin-left: auto;
+
+                .cover__contact {
+                    display: block;
+                    width: fit-content;
+                    margin-left: -114px;
+                }
+
+                .content {
+                    width: 469px;
+
+                    .title {
+                        font-size: 48px;
+                        line-height: 42px;
+                        text-align: left;
+                        margin-bottom: 16px;
+                    }
+
+                    .description {
+                        font: 400 18px/22px @fontO;
+                        width: fit-content;
+                        margin-left: 0;
+                        text-align: left;
+                        margin-bottom: 25px;
+                    }
+                }
+            } 
+        }
+    }
+}

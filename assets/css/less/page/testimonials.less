@@ -1,0 +1,158 @@
+//out: false
+
+.page__testimonials {
+    background-color: @darkenMagnolia;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .wrapper {
+
+        .heading {
+            padding-left: 35px;
+            padding-right: 35px;
+
+            .title {
+                font: 400 16px/22.3px @fontO;
+                color: @veronica;
+                text-align: center;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+            }
+
+            .subtitle {
+                font: 900 32px/35.2px @fontO;
+                color: @chryslerBlue;
+                text-align: center;                
+                margin-bottom: 54px;
+
+                span {
+                    color: @veronica;
+                }
+            }
+        }
+
+        .owl-carousel.owl-theme.testimonials__carousel {
+            .owl-stage-outer {
+                height: 330px;
+            }
+
+            .owl-nav {
+                display: none;
+            }
+
+            .owl-dots {
+                margin-top: 10px;
+            }
+
+            .owl-dots-circle();
+
+            .card__testimonial {
+                position: relative;
+                border-radius: 20px 0px;
+                background-color: white;
+                box-shadow: 0px 4px 9.8px 0px rgba(0, 0, 0, 0.15);
+                padding: 44px 30px 50px 40px;
+                height: 290px;
+                width: 290px;
+                margin-top: 20px;
+
+                .quotes {
+                    width: fit-content;
+                    position: absolute;
+                    z-index: 10;
+                    top: -19px;
+                    left: 30px;
+                }
+
+                .text {
+                    font: 400 14px/20px @fontO;
+                    color: @eerieBlack;
+                    margin-bottom: 15px;
+                }
+
+                .name {
+                    font: 400 16px/22.3px @fontO;
+                    color: @chryslerBlue;
+
+                    span {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        padding-top: 120px;
+        padding-bottom: 128px;
+
+        .wrapper {
+            max-width: 1126px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            justify-content: space-between;
+
+            .heading {
+                padding-left: 0;
+
+                .title {
+                    text-align: left;
+                }
+
+                .subtitle {
+                    font-size: 46px;
+                    line-height: 50px;
+                    text-align: left;
+                    width: 200px;
+                    margin-bottom: 0;
+                }
+            }
+
+            .owl-carousel.owl-theme.testimonials__carousel {
+                position: relative;
+
+                .owl-stage-outer {
+                    height: 266px;
+                }
+
+                .owl-nav {
+                    display: flex;
+                    position: absolute;
+                    top: -46px;
+                    right: 20px;
+                    width: 70px;
+
+                    .owl-prev,
+                    .owl-next {
+                        border-radius: 100%;
+
+                        &.disabled {
+                            opacity: 1;
+                        }
+
+                        &:hover {
+                            background-color: rgba(80, 10, 230, 0.3);  
+                            cursor: pointer;                          
+                        }
+                    }
+                }
+
+                .card__testimonial {
+                   width: 400px;
+                   height: 237px;
+                   padding: 44px 37px 37px 40px; 
+                   display: flex;
+                   flex-direction: column;
+                   justify-content: space-between;
+                   gap: 20px;
+                }
+            }
+        }
+    }
+}

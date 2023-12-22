@@ -1,0 +1,81 @@
+//out: false 
+
+.btn__blue {
+    border-radius: 20px;
+    background-color: @chryslerBlue;
+    font: 600 20px/18px @fontO;
+    color: white;
+    padding: 19px 38px 18px 38px;
+    text-align: center;
+    width: fit-content;
+    text-transform: uppercase;
+    transition: all linear .15s;
+
+    &:hover {
+        background-color: @darkenMagnolia;
+        color: @chryslerBlue;
+    }
+}
+
+.btn__veronica {
+    border-radius: 20px;
+    background-color: @veronica;
+    font: 600 18px/16px @fontO;
+    color: white;
+    padding: 18px 40px 17px 40px;
+    text-align: center;
+    width: fit-content;
+    text-transform: uppercase;
+    transition: all linear .15s;
+
+    &:hover {
+        background-color: @chryslerBlue;
+        color: white;
+    }
+}
+
+.btn__blue2 {
+    border-radius: 20px;
+    background-color: @chryslerBlue;
+    font: 600 18px @fontO;
+    color: white;
+    padding: 15px 28px;
+    text-align: center;
+    width: fit-content;
+    text-transform: uppercase;
+    transition: all linear .15s;
+
+    &:hover {
+        background-color: @veronica;
+        color: white;
+    }
+}
+
+.btn__blue3 {
+    border-radius: 20px;
+    background-color: @chryslerBlue;
+    font: 600 20px/18px @fontO;
+    color: white;
+    padding: 19px 38px 18px 38px;
+    text-align: center;
+    width: fit-content;
+    text-transform: uppercase;
+    transition: all linear .15s;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .icon__whats {
+        width: 25px;
+    }
+
+    &:hover {
+        background-color: @darkenMagnolia;
+        color: @chryslerBlue;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+
+        .icon__whats {
+            filter: brightness(0) saturate(100%) invert(15%) sepia(82%) saturate(6449%) hue-rotate(261deg) brightness(83%) contrast(121%);
+        }
+    }
+}

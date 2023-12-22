@@ -1,0 +1,117 @@
+//out: false
+
+.page__drone {
+
+    .wrapper {
+        .title {
+            font: 900 32px/35px @fontO;
+            color: @chryslerBlue;
+            margin-bottom: 5px;
+            text-align: center;
+            padding-left: 40px;
+            padding-right: 40px;
+
+            span {
+                color: @veronica;
+            }
+        }
+
+        .description {
+            font: 400 14px/17.5px @fontO;
+            color: @eerieBlack;
+            margin-bottom: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: center;
+        }
+
+        .video {
+            position: relative;
+
+            .img__drone {
+                display: none;
+            }
+
+            .bg__video {
+                width: 100%;
+            }
+
+            .btn__play {
+                position: absolute;                              
+                border-radius: 100%;
+                top: calc(50% - 30px);
+                left: calc(50% - 30px);
+
+                .icon__play {
+                    width: fit-content;
+                    transition: all linear .15s;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    
+                    .icon__play {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+
+    .modal.modal__drone {
+        .modal-header {
+            border-bottom: 0;
+            .modal-title {
+                font: 900 24px @fontO;
+                color: @chryslerBlue;
+            }
+        }
+        video {
+            display: block;
+            max-height: 600px;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .wrapper {
+
+            .title {
+                font-size: 42px;
+                line-height: 45px;
+                width: 560px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 0;
+                padding-right: 0;
+                margin-bottom: 25px;
+            }
+
+            .description {
+                font-size: 18px;
+            }
+
+            .video {
+
+                .img__drone {
+                    display: block;
+                    position: absolute;
+                    width: 286px;
+                    top: -140px;
+                    right: 36px;
+                    z-index: 2;
+                }
+
+                .btn__play {
+                    top: calc(50% - 50px);
+                    left: calc(50% - 50px);
+                    .icon__play {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            }
+        }
+    }
+}

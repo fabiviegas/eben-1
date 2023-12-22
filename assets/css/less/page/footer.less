@@ -1,0 +1,123 @@
+//out: false
+
+.page__footer {
+    padding-top: 50px;
+    padding-bottom: 60px;
+    background-image: linear-gradient(180deg, #500BE6 0%, #220463 100%);
+
+    .wrapper {
+        padding-left: 30px;
+        padding-right: 30px;
+        
+        .partners {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 60px;
+
+            .seal {
+                max-height: 50px;
+            }
+        }
+
+        .footer__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+
+            .logo__footer {
+                width: 200px;
+
+                .logo {
+                    width: 100%;
+                }
+            }
+
+            .contacts {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 24px;
+
+                .contact__link {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font: 400 16px @fontO;
+                    color: white;
+                    letter-spacing: 0.3px;
+                    transition: all linear .15s;
+
+                    .icon__contact {
+                        height: 20px;
+                    }
+
+                    &:hover {
+                        color: @teaRose;
+
+                        .icon__contact {
+                            filter: brightness(0) saturate(100%) invert(82%) sepia(24%) saturate(494%) hue-rotate(307deg) brightness(102%) contrast(92%);
+                        }
+                    }
+                }
+            }
+        }
+
+        .copyrights {
+           margin-top: 40px;
+           border-top: 1px solid white;
+           padding-top: 40px;
+           
+           .eben__copyrights {
+              font: 400 16px @fontO;
+              color: white;
+              text-align: center;
+           }
+        }
+    }
+
+    @media (min-width: 768px) {
+        padding-top: 60px;
+        padding-bottom: 50px;
+
+        .wrapper {
+            max-width: 947px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
+
+            .partners {
+                gap: 40px;
+                
+                .seal {
+                    max-height: 90px;
+                    max-width: 230px;
+                }
+            }
+
+            .footer__content {
+                flex-direction: row;
+                gap: 90px;
+                justify-content: center;
+                align-items: center;
+
+                .logo__footer {
+                    width: 225px;
+                }
+
+                .contacts {
+                    align-items: flex-start;
+                }
+            }
+
+            .copyrights {
+                margin-top: 68px;
+                padding-top: 28px;
+            }
+        }
+    }
+}

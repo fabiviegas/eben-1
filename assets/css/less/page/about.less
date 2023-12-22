@@ -1,0 +1,142 @@
+//out: false
+
+.page__about {
+    padding-top: 110px;
+    padding-bottom: 60px;
+    overflow: hidden;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        .about__imgs {
+            position: relative;
+            padding-left: 12px;
+            padding-right: 12px;
+            padding-bottom: 82px;
+
+            .number__text {
+                position: absolute;
+                font: 600 16px/20px @fontO;
+                color: @veronica;
+                text-align: center;
+                width: 236px;
+                transform: rotate(10deg);
+                top: -40px;
+                right: -20px;
+            }
+
+            .number__img {
+                position: absolute;
+                width: 200px;
+                transform: rotate(-5deg);
+                bottom: 28px;
+                right: -10px;
+            }
+        }
+
+        .content {
+            text-align: center;
+            padding-left: 30px;
+            padding-right: 30px;
+
+            .title {
+               font: 400 16px/22.5px @fontO;
+               color: @veronica;
+               letter-spacing: 5px;
+               margin-bottom: 9px; 
+               text-transform: uppercase;
+            }
+
+            .subtitle {
+               font: 700 32px/36.8px @fontO;
+               color: @chryslerBlue;
+               margin-bottom: 20px;
+               
+               span {
+                background: linear-gradient(90deg, #500BE6 0.14%, #9F0BE5 74%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 36px;
+                font-weight: 900;
+               }
+            }
+
+            .highlight {
+                font: 500 22px/27.5px @fontO;
+                margin-bottom: 20px;
+                color: @veronica;
+            }
+
+            .description {
+                font: 400 14px/17.5px @fontO;
+                margin-bottom: 40px;
+
+                span {
+                    color: @chryslerBlue;
+                    font-weight: 600;
+                }
+            }
+
+            .button {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+       padding-bottom: 140px; 
+
+       .wrapper {
+            max-width: 1100px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+
+            .about__imgs {
+                max-width: 566px;
+                padding-left: 0;
+                padding-right: 0;
+                padding-bottom: 0;
+
+                .number__img {
+                    bottom: -50px;
+                }
+            }
+
+            .content {
+                padding-left: 0;
+                padding-right: 0;
+                text-align: left;
+                max-width: 518px;
+
+                .subtitle {
+                    font-size: 40px;
+                    line-height: 46px;
+                    max-width: 373px;
+                    margin-bottom: 16px;
+
+                    span {
+                        font-size: 42px;
+                    }
+                }
+
+                .highlight {
+                    margin-bottom: 16px;
+                }
+
+                .button {
+                    margin-left: 0;
+                }
+            }
+       }
+    }
+}
