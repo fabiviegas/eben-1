@@ -119,7 +119,8 @@
               gap: 20px;
               grid-template-areas: 
                 "cover1 cover1 cover2 cover2"
-                "cover1 cover1 cover3 cover4";
+                "cover1 cover1 cover3 cover4"
+                "cover5 cover5 cover5 cover5";
             
 
               .case--1 {
@@ -184,10 +185,26 @@
                   }
               }
 
+              .case--5 {
+                grid-area: cover5;
+                max-width: 100%;
+                height: 260px;
+                border-radius: 20px;
+
+                .cover {
+                  width: 100%; 
+                  object-fit: cover;
+                  object-position: center -85px;
+                  border-radius: 20px;
+                  transition: all linear .30s;
+                }
+            }
+
               .case--1,
               .case--2,
               .case--3,
-              .case--4 {
+              .case--4,
+              .case--5 {
                 position: relative;
                 transition: all linear .20s;
                 overflow: hidden;
